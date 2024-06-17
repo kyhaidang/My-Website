@@ -1,0 +1,307 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Đăng Computer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="../CSS/style.css" type="text/css" rel="stylesheet" media="screen" />
+<link href="../CSS/prettyPhoto.css" type="text/css" rel="stylesheet" media="screen">
+<link href="../CSS/tipsy.css" type="text/css" rel="stylesheet" media="screen">
+<link href="../CSS/camera.css" type="text/css" rel="stylesheet" media="screen">
+<link href="../CSS/jcarousel.css" type="text/css" rel="stylesheet" media="screen" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Arvo:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="../JS/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" 
+src="http://maps.googleapis.com/maps/api/js?sensor=false&language=vi"></script>
+<script type="text/javascript">
+var map;
+function initialize() {
+      var myLatlng = new google.maps.LatLng(10.843928,106.717672);
+      var myOptions = {
+    zoom: 16,
+    center: myLatlng,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+}
+map = new google.maps.Map(document.getElementById("div_id"), myOptions); 
+var text;
+text= "<b style='color:#00F' " + 
+         "style='text-align:center'>Cửa hàng laptop Rẻ!<br />" + 
+     "<img src='citihouse-logo.jpg'  /></b>";
+   var infowindow = new google.maps.InfoWindow(
+    { content: text,
+        size: new google.maps.Size(100,50),
+        position: myLatlng
+    });
+       infowindow.open(map);    
+    var marker = new google.maps.Marker({
+      position: myLatlng, 
+      map: map,
+      title:"Cửa hàng laptop Rẻ!"
+  });
+}
+</script>
+
+<script type="text/javascript" src="../JS/modernizr-1.7.min.js"></script>
+<script type="text/javascript" src="../JS/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="../JS/jquery.tipsy.js"></script>
+<script type='text/javascript' src='../JS/jquery.easing.1.3.js'></script>
+<script type='text/javascript' src='../JS/camera.min.js'></script> 
+<script type="text/javascript" src="../JS/jquery.jcarousel.min.js"> </script>
+<script type="text/javascript" src="../JS/jquery-hover-effect.js"></script>
+<script type='text/javascript' src='../JS/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='../JS/jquery.dcmegamenu.1.3.3.js'></script>
+<script type='text/javascript' src="../JS/jquery.tweet.js"></script>
+<script type="text/javascript" src="../JS/jquery.quovolver.js"></script>
+<script type="text/javascript" src="../JS/custom.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function($){
+	$('#mega-menu-3').dcMegaMenu({
+		rowItems: '2',
+		speed: 'fast',
+		effect: 'fade'
+	});
+});
+</script>
+
+</head>
+
+<body>
+    <div id="page_wrap">
+        <header>
+            <div id="top">
+                <span>WEBSITE BÁN LAPTOP & PHỤ KIỆN</span>
+                <div>
+                    <p>Ngôn Ngữ:
+                    <label>
+                        <select>
+                            <option selected>Tiếng Việt </option>
+                            <option>Tiếng Anh</option>
+                            
+                        </select>
+                    </label>​
+                    </p>
+                    <p>Tiền Tệ:
+                    <label>
+                        <select>
+                            <option selected>Tiền Đô </option>
+                            <option>Tiền Việt- VND</option>
+                        </select>
+                    </label>​
+                    </p>
+                </div>
+            </div>
+            <div id="top2">
+                <ul class="myaccountmenu">
+                    <li><a href="wishlist.html">Sản phẩm yêu thích</a></li>
+                    <li><a href="#">Giỏ Hàng</a></li>
+                    <li><a href="checkout.html">Thanh Toán</a></li>
+                    <li class="login"><a href="#login-box" class="last login-window">Đăng Nhập</a></li>
+                </ul>
+                <div id="login-box" class="login-popup">
+                <a href="#" class="close"><img src="../RES/process-stop.png" class="btn_close" title="Close Window" alt="Close" /></a>
+                  <form method="post" class="signin" action="#">
+                        <fieldset class="textbox">
+                        <label class="Tên đăng nhập">
+                        <span>Tên đăng nhập hoặc Email</span>
+                        <input id="Tên đăng nhập" name="Tên đăng nhập" value="" type="text" autocomplete="on" placeholder="Tên đăng nhập">
+                        </label>
+                        <label class="Mật khẩu">
+                        <span>Mật khẩu</span>
+                        <input id="Mật khẩu" name="Mật khẩu" value="" type="Mật khẩu" placeholder="Mật khẩu">
+                        </label>
+                        <button class="submit button" type="button">Đăng nhập</button>
+                        <p>
+                        <a class="forgot" href="#">Forgot?</a> / <a class="register" href="dang-ky.html">Register</a>
+                        </p>        
+                        </fieldset>
+                  </form>
+                </div>
+                <div id="demo-header">
+                    <a id="cart-link" href="#cart" title="Cart">Giỏ Hàng</a>
+                    
+                </div>
+            </div>
+            <div id="top3">
+                <h1 class="logo"><a href="index.html">Bán Laptop</a></h1>
+                <form action="#" method="post" class="search_bar">
+                    <fieldset>
+                      <input type="text" name="search" class="search" value="Tìm kiếm..." onBlur="if (this.value == ''){this.value = 'Enter a keywords...'; }" onFocus="if (this.value== 'Enter a keywords...') {this.value = ''; }" />
+                      <input type="submit" name="submit" value="Search" class="submit" />
+                    </fieldset>
+                </form>
+            </div>
+        </header>
+        <div id="container">
+            <nav>  
+                <ul id="mega-menu-3" class="mega-menu">
+                    <li class="first"><a href="#" class="current">Trang chủ</a></li>
+                    <li><a href="laptop-re.html">LAPTOP</a>
+                        <ul>
+                            <li><a href="laptop-re.html">Laptop cũ đời Mới</a>
+                                
+                                <ul>
+                                    <li><a href="linh-kien-dell.html">Dell</a></li>
+                                    <li><a href="linh-kien-hp.html">HP</a></li>
+                                    <li><a href="#">Acer</a></li>
+                                    <li><a href="#">Vaio</a></li>
+                                    <li><a href="#">Toshiba</a></li>
+                                    <li><a href="#">Samsung</a></li>
+                                </ul>
+                            </li>
+                        
+                        </ul>
+                    </li>
+               
+                <li><a href="linh-kien.html">Phụ kiện</a>
+                    <ul>
+                        <li><a href="#">Màn hình</a></li>
+                        <li><a href="linh-kien-chuot.html">Chuột</a></li>
+                        <li><a href="#">Bàn phím</a></li>
+                        <li><a href="#">CPU</a></li>
+                        <li><a href="#">RAM</a></li>
+                        <li><a href="#">Sạc pin</a></li>
+                    </ul>
+                </li>
+                <li><a href="phan-mem.html">Phần mềm</a>
+                    <ul>
+                        <li>
+                        <ul>
+                            <li><a href="#">Văn phòng</a></li>
+                            <li><a href="#">Diệt Virut</a></li>
+                            <li><a href="#">Đồ họa</a></li>
+                        </ul>
+                        
+                        </li>
+                        
+                        </ul>
+                </li>
+                <li><a href="#">Diễn Đàn</a>
+                    
+                </li>
+                <li><a href="#">Dịch vụ bảo trì</a>
+                    <ul>
+                        <li><a href="#">Sửa màn hình</a></li>
+                        <li><a href="#">Sửa bàn phím</a></li>
+                        <li><a href="#">Sửa Main Laptop</a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="ban-do.html">Liên Hệ</a></li>
+                </ul>
+            </nav>
+                           
+            <div style="padding-left: 40px;">
+                  <div style="clear:both; display:block; height:40px;"></div>
+                  <div class="prod">
+                        <div class="clearfix"> 
+                        <a href="../RES/products/dell-1.jpg" class="jqzoom" rel='gal1'  title="triumph" > <img src="../RES/products/dell-1.jpg" style="border: 4px solid #e5e5e5;"> </a>
+                        </div>
+                       
+                    </div>
+                    <div class="prod-detail">
+                      <h2>Dell Latitude E5440- Core i7 4200U 3.2Ghz</h2>
+                        <span class="price">7.800.000 VNĐ</span>
+                        
+                         <span class="cart-button"><a href="#">Thêm vào giỏ hàng</a><a href="#">So sánh</a></span>
+                         <div id="tab">
+                            <ul class="nav">
+                                <li class="nav-one"><a href="#details" class="current">Chi tiết</a></li>
+                                <li class="nav-two"><a href="#specs">Thông số kỹ thuật</a></li>
+                                <li class="nav-three"><a href="#reviews">Tải Driver</a></li>
+                                
+                            </ul>
+                            <div class="list-wrap">
+                                <div id="details">
+                                  <p>CPUs: 4th Generation Core i5-4200U upto 2.6Ghz (4CPUs) Haswel CPU
+                                    Graphic Card  : VGA  Intel HD Graphics 4400  upto 2GB 
+                                    RAM :  4 GB DDR3L Bus 1600 Maxram 16GB 
+                                    HDD : 250 GB HDD 7200rpm original => 500GB + 200K
+                                    Monitor 14 inch Anti Glare DELL ( 1366x768 )
+                                    Windows 8,1 Pro
+                                    Battery 5 hours
+                                    USB 3.0 • HDMI • Blutooth 4.0 • Headphone Microphone input • Wireless Type: 802.11n • SD Card  • Touchpad Multi 
+                                     LikeNew, new 100%  
+                                    
+                                    3 months warranties </p>
+                                    
+                                </div>
+                                <ul id="specs" class="hide">
+                                    <li><span>Mã sản phẩm:</span> LT 01</li>
+                                    <li><span>Trạng thái hàng:</span> Vẫn còn 2 sp trong kho</li>
+                                    <li><span>Giá:</span> 7.800.000 VNĐ</li>
+                                    <li><span>Thuế(10%):</span> 780.000 VNĐ</li>
+                                </ul>
+                                
+                                <ul id="tags" class="hide">
+                                    
+                                    <li><a href="#">Phụ kiện</a></li>
+                                    <li><a href="#">Hãng Sản Xuất</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relatedprod">
+                      <h4>Sản phẩm tương tự</h4>
+                      
+                </div>
+                       
+
+                  
+                <div class="container-2">
+                	<div style="clear:both; display:block; height:40px"></div>
+                	<div class="content-wrap">
+                    	<h4>Về chúng tôi!</h4>
+                         <p>Trong môi trường kinh tế và công nghệ không ngừng phát triển, thị trường bán lẻ sản phẩm công nghệ ngày càng phát triển về quy mô. Cùng với xu hướng thị trường laptop cũ với nhiều ưu điểm về giá<a href="#"> Đọc thêm...</a></p>
+                        
+                    </div>
+                    <div class="one-third">
+                    	<div class='tweet query'></div>
+                    </div>
+                    <div class="one-third">
+                    	<div class="fb-like-box" data-href="http://www.facebook.com/HTML5Awesome" data-width="280" data-show-faces="true" data-stream="false" data-border-color="#e5e5e5" data-header="false"></div>
+                    </div>
+                </div>
+                
+            </div>
+            <footer>
+                <div class="content-wrap">
+                    <div class="one-fourth first">
+                        <h4>Thông tin</h4>
+                        <ul>
+                            <li><a href="/about.html">Về chúng tôi</a></li>
+                            <li><a href="#">Thông tin giao hàng</a></li>
+                            <li><a href="#">Chính sách chất lượng</a></li>
+                            <li><a href="#">Điều khoản</a></li>
+                        </ul>
+                    </div>
+                                      
+                    <div class="one-fourth">
+                    	<h4>Tài khoản</h4>
+                        <ul>
+                        	<li><a href="account.html">Tài khoản của tôi</a></li>
+                            <li><a href="#">Lịch sử giao dịch</a></li>
+                            <li><a href="#">TIn tức</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-wrap">
+                    <div style="clear:both; display:block;" class="social-wrap"></div>
+                    <ul class="social">
+                        <li><a href="#" class="tip" title="Facebook"><img src="../RES/social-icon-facebook.png" alt="Facebook"></a></li>
+                        
+                    </ul>
+                    <ul class="payment">
+                        <li><a href="#" class="tip" title="Paypal"><img src="../RES/payment-icon-paypal.png" alt="Paypal"></a></li>
+                        <li><a href="#" class="tip" title="Master Card"><img src="../RES/payment-icon-mastercard.png" alt="Master Card"></a></li>
+                        <li><a href="#" class="tip" title="Visa"><img src="../RES/payment-icon-visa.png" alt="Visa"></a></li>
+                    </ul>
+                    <p style="clear:both; display:block;">Đăng Computer<a href="#">Cửa hàng laptop uy tín và chất lượng</a></p>
+                </div>
+            </footer>
+        </div>
+    </div>
+   
+
+</body>
+</html>
